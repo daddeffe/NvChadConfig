@@ -20,7 +20,13 @@ M.setup_lsp = function(attach, capabilities)
       flags = {
         debounce_text_changes = 150,
       },
-      settings = {},
+      settings = {
+            Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+      },
     }
 
     server:setup(opts)
